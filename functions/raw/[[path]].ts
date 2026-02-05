@@ -5,7 +5,9 @@ export async function onRequestGet(context) {
   const [bucket, path] = parseBucketPath(context);
   if (!bucket) return notFound();
   if (!can_access_path(context, path || "")) {
-    return new Response("没有读取权限", { status: 401 });
+    const headers = new Headers();
+    headers.set("WWW-Authenticate", 'Basic realm="需要登录"');
+    return new Response("没有读取权限", { status: 401, headers });
   }
   const url = context.env["PUBURL"] + "/" + context.request.url.split("/raw/")[1]
 

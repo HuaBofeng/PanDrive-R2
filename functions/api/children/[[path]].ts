@@ -8,10 +8,14 @@ export async function onRequestGet(context) {
     if (!bucket || prefix.startsWith("_$flaredrive$/")) return notFound();
     const allowList = get_allow_list(context);
     if (!allowList) {
-      return new Response("没有读取权限", { status: 401 });
+      const headers = new Headers();
+      headers.set("WWW-Authenticate", 'Basic realm="需要登录"');
+      return new Response("没有读取权限", { status: 401, headers });
     }
     if (prefix && !can_access_path(context, prefix)) {
-      return new Response("没有读取权限", { status: 401 });
+      const headers = new Headers();
+      headers.set("WWW-Authenticate", 'Basic realm="需要登录"');
+      return new Response("没有读取权限", { status: 401, headers });
     }
 
     const objList = await bucket.list({
