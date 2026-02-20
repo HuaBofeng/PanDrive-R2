@@ -20,10 +20,10 @@
     </div>
 
     <div class="project-links">
-      <strong>项目:</strong><a href="https://github.com/willow-god/FlareDrive-R2" target="_blank"
+      <strong>项目:</strong><a href="https://github.com/HuaBofeng/panDrive-R2" target="_blank"
         rel="noopener noreferrer">panDrive-R2</a>
       <strong>作者:</strong><a href="https://github.com/willow-god" target="_blank"
-        rel="noopener noreferrer">LiuShen</a>
+        rel="noopener noreferrer"> 华博枫(lanni) </a>
       <strong>初始项目:</strong><a href="https://github.com/ljxi/Cloudflare-R2-oss" target="_blank"
         rel="noopener noreferrer">Cloudflare-R2-OSS</a>
     </div>
@@ -31,7 +31,7 @@
     <div class="powered">Powered by <a href="https://workers.cloudflare.com/" target="_blank"
         rel="noopener noreferrer">Cloudflare Workers</a></div>
 
-    <div style="margin:10px 0;">© 2025 FlareDrive. All rights reserved.</div>
+    <div style="margin:10px 0;">© 2026 panDrive. All rights reserved.</div>
   </footer>
 </template>
 
@@ -40,10 +40,10 @@ export default {
   name: "Footer",
   data() {
     return {
-      homeUrl: "https://www.liushen.fun/",
-      blogUrl: "https://blog.liushen.fun/",
-      githubUrl: "https://github.com/willow-god",
-      emailUrl: "mailto:01@liushen.fun"
+      homeUrl: "https://www.huabofeng.eu.org/",
+      blogUrl: "https://blog.huabofeng.eu.org/",
+      githubUrl: "https://github.com/HuaBofeng",
+      emailUrl: "mailto:email@huabofeng.eu.org"
     };
   }
 };
