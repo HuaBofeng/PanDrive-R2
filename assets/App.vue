@@ -604,7 +604,7 @@ export default {
         }
         document.title = this.cwd.replace(/.*\/(?!$)|\//g, "") === "/" 
             ? "panDrive-R2 - 优雅的 Cloudflare R2 网盘文件库"
-            :`${this.cwd.replace(/.*\/(?!$)|\//g, "") || "/" } - `;
+            :`${this.cwd.replace(/.*\/(?!$)|\//g, "") || "/" } - 欢迎来到我的网盘`;
       },
       immediate: true,
     },
